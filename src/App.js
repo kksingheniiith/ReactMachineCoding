@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import './styles/Stepper.css'
+import { FeatureFlagProvider } from "./contexts";
+import TrialComponent from "./components/trial";
+import LowPackageComponent from "./components/low-package";
+import Stepper from './components/stepper';
+import { Example1, Example2, Example3, Example4 } from './components/stepper';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome to My App</h1>
+      {/* <FeatureFlagProvider>
+        <TrialComponent />
+        <LowPackageComponent />
+      </FeatureFlagProvider> */}
+      <Stepper list={[<Example1 />, <Example2 />, <Example3 />, <Example4 />]}></Stepper>
     </div>
   );
 }
