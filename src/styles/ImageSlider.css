@@ -1,0 +1,50 @@
+.image-slider {
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.image {
+    display: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+
+.image.active {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.bullets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.bullet {
+    flex-direction: row;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(140, 129, 114);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.bullet.active {
+    background-color: aqua;
+}
