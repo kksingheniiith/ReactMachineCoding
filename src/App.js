@@ -3,6 +3,7 @@ import "./styles/Stepper.css";
 import "./styles/Todo.css";
 import "./styles/ImageSlider.css";
 import "./styles/Modal.css";
+import "./styles/Folder-structure.css"
 import { useState } from "react";
 import { FeatureFlagProvider } from "./contexts";
 import TrialComponent from "./components/trial";
@@ -13,6 +14,7 @@ import Todo from "./components/todo";
 import ImageSlider from "./components/image-slider";
 import { images } from "./constants/demoImages";
 import Modal from "./components/modal";
+import FolderStructure from './components/folder-structure';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -26,14 +28,15 @@ function App() {
       {/* <Stepper list={[<Example1 />, <Example2 />, <Example3 />, <Example4 />]}></Stepper> */}
       {/* <Todo /> */}
       {/* <ImageSlider images={images}/> */}
-      <button onClick={() => setShowModal(!showModal)}>{showModal ? 'Hide' : "Show"}</button>
+      {/* <button onClick={() => setShowModal(!showModal)}>{showModal ? 'Hide' : "Show"}</button>
       <Modal
         headerText={"Modal Header"}
         show={showModal}
         onClose={() => setShowModal(false)}
       >
         <div>Modal Content</div>
-      </Modal>
+      </Modal> */}
+      <FolderStructure />
     </div>
   );
 }
